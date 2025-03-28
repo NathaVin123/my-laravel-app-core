@@ -3,7 +3,7 @@
 @task('deploy_dev', ['on' => 'dev'])
     cd /home/vincent/Project/docker/trial/my-laravel-app-dev
     git checkout dev
-    git fetch origin master
+    git fetch core master
     git pull origin dev
     docker exec laravel_app sh -c "php artisan migrate --force"
     docker exec laravel_app sh -c "php artisan config:cache"
